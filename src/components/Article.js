@@ -7,6 +7,7 @@ class Article extends Component {
 
     async componentDidMount() {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        .catch(error => alert('Data base is not find!', error))
         const data = await response.json()
         
         console.log(data)
